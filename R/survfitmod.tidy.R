@@ -1,7 +1,7 @@
 survfitmod.tidy <- function(fit, var1, year1, year2, data) {
 
-  require(dplyr)
-  require(survival)
+  library(dplyr)
+  library(survival)
 
   group_var1 <- enquo(var1)
 
@@ -9,14 +9,14 @@ survfitmod.tidy <- function(fit, var1, year1, year2, data) {
     group_by(!!group_var1) %>%
     summarize(n=n()) %>%
     mutate(strata=as.character(!!group_var1)) %>%
-    select(strata, n) # Tällä saadaan totaalimäärät
+    select(strata, n)
 
 
   b <- tidy(fit) %>%
     group_by(strata) %>%
     summarize(events = sum(n.event))  %>%
     separate(strata, c("trash", "strata"), sep="=") %>%
-    select(-trash) #eventit mukaan
+    select(-trash)
 
   c <- tidy(fit) %>%
     filter(time>=year1) %>%
