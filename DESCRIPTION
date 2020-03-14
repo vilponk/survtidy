@@ -2,7 +2,7 @@ Package: survtidy
 Type: Package
 Title: survtidy prints survival analysis results in tidier format
 Version: 0.1.0
-Author: Ville Ponkilainne
+Author: Ville Ponkilainen
 Maintainer: The package maintainer <ville.ponkilainen@tuni.fi>
 Description: Contains functions to make survival anaylsis more fluent
 License: CC

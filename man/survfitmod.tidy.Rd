@@ -1,6 +1,6 @@
-\name{survfit.tidy}
-\alias{survfit.tidy}
-\title{survfit.tidy}
+\name{survfitmod.tidy}
+\alias{survfitmod.tidy}
+\title{survfitmod.tidy}
 \usage{
 survfitmod.tidy()
 }
