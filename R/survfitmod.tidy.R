@@ -2,6 +2,7 @@ survfitmod.tidy <- function(fit, var1, year1, year2, data) {
 
   library(dplyr)
   library(survival)
+  library(broom)
 
   group_var1 <- enquo(var1)
 
