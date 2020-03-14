@@ -1,5 +1,8 @@
 survfitmod.tidy <- function(fit, var1, year1, year2, data) {
 
+  require(dplyr)
+  require(survival)
+
   group_var1 <- enquo(var1)
 
   a <- data %>%
