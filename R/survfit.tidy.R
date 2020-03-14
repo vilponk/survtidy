@@ -1,7 +1,8 @@
 survfit.tidy <- function(time, status, var1, year1, year2, data) {
 
-  library(dplyr)
+  library(tidyverse)
   library(survival)
+  library(broom)
 
   group_var1 <- enquo(var1)
 

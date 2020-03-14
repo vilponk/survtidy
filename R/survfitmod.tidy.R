@@ -1,6 +1,6 @@
 survfitmod.tidy <- function(fit, var1, year1, year2, data) {
 
-  library(dplyr)
+  library(tidyverse)
   library(survival)
   library(broom)
 
